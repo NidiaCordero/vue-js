@@ -1,5 +1,5 @@
 <template>
-    <header>
+  <header>
     <div id="carouselExampleIndicators " class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -29,31 +29,43 @@
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
     </div>
+    
   </header>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        cssImg1: {
-          backgroundImage: `url(${require('@/assets/images/header.jpeg')})`
-        },
-        cssImg2: {
-          backgroundImage: `url(${require('@/assets/images/header2.jpg')})`
-        },
-        cssImg3: {
-          backgroundImage: `url(${require('@/assets/images/header3.jpg')})`
-        },
+export default {
+  data() {
+    return {
+      cssImg1: {
+        backgroundImage: `url(${require("@/assets/images/header.jpeg")})`
+      },
+      cssImg2: {
+        backgroundImage: `url(${require("@/assets/images/header2.jpg")})`
+      },
+      cssImg3: {
+        backgroundImage: `url(${require("@/assets/images/header3.jpg")})`
       }
-    }
-  }
+    };
+  },
+  
+};
 </script>
