@@ -30,7 +30,7 @@
         </div>
       </div>
       <a
-        class="carousel-control-prev"
+      class="carousel-control-prev"
         href="#carouselExampleIndicators"
         role="button"
         data-slide="prev"

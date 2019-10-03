@@ -2,15 +2,16 @@
  <!-- Page Content -->
   <div class="container">
 
-    <h1 class="my-4">Welcome to Modern Business</h1>
+    <h1 class="my-4">Mini list to-do</h1>
 
     <!-- Marketing Icons Section -->
-    <div class="row">
+    <div class="row" id="add">
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
+          <h4 class="card-header">{{title}}</h4>
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            <input id="itemForm" />
+            <button v-on:click="addItem">Add to do</button>
           </div>
           <div class="card-footer">
             <a href="#" class="btn btn-primary">Learn More</a>
@@ -21,7 +22,12 @@
         <div class="card h-100">
           <h4 class="card-header">Card Title</h4>
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+            <ul>
+              <li v-for="item in items">
+                {{item.text}}
+
+              </li>
+            </ul>
           </div>
           <div class="card-footer">
             <a href="#" class="btn btn-primary">Learn More</a>
@@ -149,7 +155,38 @@
       </div>
     </div>
 
-  </div>
         
-    
+   
+  </div>
 </template>
+<script>
+import { METHODS } from 'http';
+
+
+export default {
+  data() {
+    return {
+     title:"Mini List to do",
+     items:[
+       {text:"lorem lorem"},
+       {text:"Trooolll"},
+
+     ]
+    }
+
+  },
+  
+        methods:{
+          addItem:function(){
+            var input= document.getElementById('itemForm');
+            if(input.value !== ''){
+              this.items.push({
+                text:input.value
+              })
+              input.value='';
+            }
+          }
+        }
+};
+
+</script>
