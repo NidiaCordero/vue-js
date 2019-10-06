@@ -1,7 +1,41 @@
 <template>
   <!-- Page Content -->
   <div class="container">
-    <h1 class="my-4">Mini list to-do</h1>
+    <h2 class="my-4">Mini list to-do</h2>
+
+    <!-- Marketing Icons Section -->
+    <div class="row" id="add">
+      <div class="col-lg-6 mb-6">
+        <div class="card h-100">
+          <h4 class="card-header">{{title}}</h4>
+          <div class="card-body">
+            <!-- creation input and button for add items to list  -->
+            <input id="itemForm" v-on:keypress.enter="addItem" />
+            <button v-on:click="addItem" class="btn btn-info ml-2">Add to do</button>
+          </div>
+         
+        </div>
+      </div>
+      <div class="col-lg-6 mb-6">
+        <div class="card h-100">
+          <h4 class="card-header">A faire</h4>
+          <div class="card-body">
+            <!-- creation list -->
+            <ul>
+              <li v-for="(item ,index) in items">
+                {{item.text}}
+              
+                <button v-on:click="deleteItem" class="btn btn-danger ml-2 mb-2">Delete</button>
+              </li>
+            </ul>
+          </div>
+         
+        </div>
+      </div>
+     
+    </div>
+    <!-- /.row -->
+    <h2 class="my-4">Mini list shop</h2>
 
     <!-- Marketing Icons Section -->
     <div class="row" id="add">
